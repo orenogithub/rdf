@@ -138,7 +138,7 @@ module RDF
       !(has_subject?    && subject.resource? &&
         has_predicate?  && predicate.resource? &&
         has_object?     && (object.resource? || object.literal?) &&
-        (has_graph?     ? graph_name.resource? : true ))
+        (has_graph?     ? graph_name.resource? : true))
     end
 
     ##
@@ -153,7 +153,7 @@ module RDF
       has_subject?    && subject.resource? && subject.valid? &&
       has_predicate?  && predicate.uri? && predicate.valid? &&
       has_object?     && object.term? && object.valid? &&
-      (has_graph?      ? graph_name.resource? && graph_name.valid? : true )
+      (has_graph?      ? (graph_name.resource? && graph_name.valid?) : true)
     end
 
     ##
